@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: hsl(282, 27%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+#welcome-section img {
+    max-width: 100%;
+}
+
+
+#layer1,
+#layer2,
+#layer3,
+#layer4,
+#layer5,
+#layer6,
+#layer7,
+#layer8 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+
+#welcome-section {
+    transform-style: preserve-3d;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+
+
+
+
+/*--------------------nav bar---------------------*/
+
+
+
+
+
+#toggle,
+#toggle-icon {
+    position: absolute;
+    left: -999999px;
+}
+
+
+
+input#toggle[type="checkbox"]:hover + ul,
+input#toggle[type="checkbox"]:checked + ul,
+#navbar ul:hover {
+    width: 200px;
+    height: 300px;
+    font-size: 2rem;
+}
+
+
+
+input#toggle-icon[type="checkbox"]:hover + img {
+    transform: scale(1.1) rotate(45deg);
+}
+
+
+label img:hover {
+    transform: scale(1.1) rotate(45deg);
+}
+
+
+
+label img {
+    max-width: 80px;
+    width: 10vw;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 5px hsl(193, 55%, 15%);
+    border-radius: 100%;
+}
+
+
+
+#navbar {
+    position: fixed;
+    top: 0;
+    padding-top: 5vw;
+    left: 5vw;
+    z-index: 50;
+}
+
+#navbar ul {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 0rem;
+    width: 0px;
+    height: 0px;
+    transition: width 200ms linear, height 200ms linear, font-size 200ms linear;
+    padding-top: 10px;
+}
+
+
+#navbar ul li {
+    background: hsl(193, 72%, 69%);
+    list-style-type: none;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 5px hsl(193, 55%, 15%);
+    
+}
+
+#navbar ul a {
+    color: hsl(0, 0%, 100%);
+    text-shadow: 1px 0px hsl(189, 77%, 23%), -1px 0px hsl(189, 77%, 23%), 0px 1px hsl(189, 77%, 23%), 0px -1px hsl(189, 77%, 23%);
+    text-decoration: none;
+    transform: translateZ(20px) scale(-21);
+}
+
+
+
+@media (max-width: 700px) {
+
+    input#toggle[type="checkbox"]:hover + ul,
+    input#toggle[type="checkbox"]:checked + ul,
+    #navbar ul:hover {
+        width: 160px;
+        height: 2800px;
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
+/*--------------------Welcome View------------------*/
+
+
+
+
+#layer2 {
+    transform: translateZ(-6px) scale(7);
+}
+
+#layer3 {
+    transform: translateX(700vw) translateZ(-5px) scale(6);
+    animation-name: clouds-movement;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes clouds-movement {
+
+    0% {
+        transform: translateX(-700vw) translateZ(-6px) scale(7);
+    }
+    
+    
+}
+
+@media (max-width: 1400px) {
+
+    #layer3 {
+        transform: translateX(600vw) translateZ(-6px) scale(7);
+        animation-name: clouds-movement;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    
+    }
+
+    @keyframes clouds-movement {
+        0% {
+            transform: translateX(-700vw) translateZ(-6px) scale(7);
+        }
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #layer3 {
+        transform: translateX(600vw) translateZ(-6px) scale(7);
+        animation-name: clouds-movement;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    
+    }
+
+    @keyframes clouds-movement {
+        0% {
+            transform: translateX(-650vw) translateZ(-6px) scale(7);
+        }
+    }
+
+}
+
+#layer4 {
+    transform: translateZ(-4px) scale(5);
+}
+
+#layer5 {
+    transform: translateZ(-2.5px) scale(3.5);
+}
+
+#layer6 {
+    transform: translateZ(-2px) scale(3);
+}
+
+#layer7 {
+    transform: translateZ(-1px) scale(2);
+}
+
+
+
+
+/*--------------------Main content---------------------------*/
+
+
+
+
+
+h2 {
+    padding: 150px 80px;
+    font-family: 'Special Elite', cursive;
+    font-size: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 18vw;
+    color: hsl(0, 0%, 100%);
+    margin: 18vw auto;
+    z-index: 100;
+    font-family: 'Berkshire Swash', cursive;
+    text-shadow: 0px 0px 5px hsl(189, 77%, 23%);
+}
+
+@media (min-width: 1350px) {
+
+    h1 {
+        font-size: 16rem;
+        text-align: center;
+        margin: 18vw auto;
+    }
+
+}
+
+
+main {
+    margin-top: -5px;
+    background: linear-gradient(360deg,hsl(282, 27%, 27%), hsl(193, 55%, 15%));
+    height: fit-content;
+    margin-bottom: 0;
+}
+
+
+section {
+    width: 90%;
+    margin: auto;
+}
+
+
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+#projects {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#projects figure {
+    margin-top: 30px;
+}
+
+.project-tile {
+
+    width: 600px;
+    height: auto;
+    margin: 50px auto;
+}
+
+.project-tile figure img:hover {
+    box-shadow: 0px 0px 25px 5px hsl(0, 0%, 100%);
+}
+
+
+
+#projects img{
+    border: 10px ridge hsl(235, 6%, 58%);
+    border-radius: 2px;
+}
+
+.project-tile figure {
+    margin: auto 50px;
+}
+
+
+figcaption {
+    padding-top: 40px;
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+
+
+
+
+/*----------------------contact-me------------------------*/
+
+
+
+
+
+
+#contact-me {
+    padding-bottom: 14vw;
+}
+
+
+
+#social-media {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#social-media img {
+    width: 100px;
+    margin: 50px;
+}
+
+@media (max-width: 800px) {
+    #social-media img {
+        margin: 20px;
+        width: 15vw;
+    }
+}
+
+#social-media img:hover {
+    transform: scale(1.1);
+    background: hsl(193, 55%, 15%);
+    box-shadow: 0px 0px 5px 5px hsl(193, 55%, 15%);
+    border-radius: 20px;
+}
+
+
+#about-me p, #contact-me p {
+    text-align: justify;
+    line-height: 1.7;
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+@media (max-width: 1200px) {
+
+    h2 {
+        font-size: 3rem;
+        padding: 100px 80px;
+    }
+
+    p {
+        font-size: 1.5rem
+    }
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    h2 {
+        font-size: 2.5rem;
+        padding: 70px 80px;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
